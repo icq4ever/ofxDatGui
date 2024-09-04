@@ -466,6 +466,7 @@ class ofxDatGuiDropdown : public ofxDatGuiGroup {
             for(int i=0; i<options.size(); i++){
                 ofxDatGuiDropdownOption* opt = new ofxDatGuiDropdownOption(options[i]);
                 opt->setIndex(children.size());
+                opt->setWidth(this->getWidth());
                 opt->onButtonEvent(this, &ofxDatGuiDropdown::onOptionSelected);
                 children.push_back(opt);
             }
